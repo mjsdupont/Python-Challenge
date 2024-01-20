@@ -53,8 +53,8 @@ with open(txt_file, "w") as txt_file:
     txt_file.write(f"Total Votes: {total_votes}\n")
     txt_file.write("-" * 30)
 
-for candidate, votes in candidate_votes.items():
-    txt_file.write(f"{candidate}: {percentages[candidate]:.3f}% ({votes})\n")
+    for candidate, votes in candidate_votes.items():
+        txt_file.write(f"{candidate}: {percentages[candidate]:.3f}% ({votes})\n")
 
     txt_file.write("-" * 30)
     txt_file.write(f"Winner: {winner}\n")
